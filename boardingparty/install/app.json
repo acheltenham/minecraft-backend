@@ -1,0 +1,32 @@
+{
+    "name": "boardingparty",
+    "env": {
+    },
+    "build": {
+        "skip": true
+    },
+    "hooks": {
+        "prebuild": {
+            "commands": [
+                "echo 'prebuild'",
+                "./fixTagRequirement"
+            ]
+        },
+        "postbuild": {
+            "commands": [
+                "echo 'postbuild'",
+                "./sync"
+            ]
+        },
+        "precreate": {
+            "commands": [
+                "echo 'precreate'"
+            ]
+        },
+        "postcreate": {
+            "commands": [
+                "echo 'postcreate'"
+            ]
+        }
+    }
+}
